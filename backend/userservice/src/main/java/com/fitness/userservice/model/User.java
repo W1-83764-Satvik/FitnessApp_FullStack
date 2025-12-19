@@ -1,6 +1,7 @@
 package com.fitness.userservice.model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -8,11 +9,12 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 @Data
+@Builder
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String user_id;
+    private String userId;
     @Column(unique = true)
     private String email;
     @Column(nullable = false)
