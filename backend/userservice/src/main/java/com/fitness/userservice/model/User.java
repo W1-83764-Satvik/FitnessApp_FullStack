@@ -3,6 +3,8 @@ package com.fitness.userservice.model;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +24,10 @@ public class User {
     private String firstName;
     private String lastName;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     private UserRole role = UserRole.USER;
+    @CreationTimestamp
     private LocalDateTime createdOn;
+    @UpdateTimestamp
     private LocalDateTime updatedOn;
 }

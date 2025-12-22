@@ -1,11 +1,11 @@
 package com.fitness.userservice.service;
 
-import com.fitness.userservice.dto.RegisterRequest;
-import com.fitness.userservice.dto.UserResponce;
+import com.fitness.userservice.dto.request.RegisterRequest;
+import com.fitness.userservice.dto.response.UserResponse;
+import com.fitness.userservice.exceptions.customException.UserNotFoundException;
 import com.fitness.userservice.model.User;
 import com.fitness.userservice.repository.UserRepo;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepo userRepo;
-    public UserResponce register(RegisterRequest registerRequest){
+
+
+    public UserResponse register(RegisterRequest registerRequest){
 
         if(userRepo.existsByEmail(registerRequest.getEmail())){
             throw new RuntimeException("Email \""+ registerRequest.getEmail() + "\" already exist!!");
@@ -27,7 +29,7 @@ public class UserService {
 
         User savedUser = userRepo.save(user);
 
-        UserResponce responce = UserResponce.builder()
+        UserResponse response = UserResponse.builder()
                 .userId(savedUser.getUserId())
                 .email(savedUser.getEmail())
                 .firstName(savedUser.getFirstName())
@@ -36,6 +38,20 @@ public class UserService {
                 .updatedOn(savedUser.getUpdatedOn())
                 .build();
 
-        return responce;
+        return response;
+    }
+
+    public UserResponse getUserProfile(String userId) {
+        User savedUser = userRepo.findById(userId).orElseThrow( ()-> new UserNotFoundException("User not found with id "+ userId));
+
+        return UserResponse.builder()
+                .userId(savedUser.getUserId())
+                .email(savedUser.getEmail())
+                .firstName(savedUser.getFirstName())
+                .lastName(savedUser.getLastName())
+                .createdOn(savedUser.getCreatedOn())
+                .updatedOn(savedUser.getUpdatedOn())
+                .build();
+
     }
 }
