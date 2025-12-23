@@ -2,6 +2,7 @@ package com.fitness.userservice.service;
 
 import com.fitness.userservice.dto.request.RegisterRequest;
 import com.fitness.userservice.dto.response.UserResponse;
+import com.fitness.userservice.exceptions.customException.UserAlreadyExistException;
 import com.fitness.userservice.exceptions.customException.UserNotFoundException;
 import com.fitness.userservice.model.User;
 import com.fitness.userservice.repository.UserRepo;
@@ -18,7 +19,7 @@ public class UserService {
     public UserResponse register(RegisterRequest registerRequest){
 
         if(userRepo.existsByEmail(registerRequest.getEmail())){
-            throw new RuntimeException("Email \""+ registerRequest.getEmail() + "\" already exist!!");
+            throw new UserAlreadyExistException("Email \""+ registerRequest.getEmail() + "\" already exist!!");
         }
 
         User user = User.builder().email(registerRequest.getEmail())
