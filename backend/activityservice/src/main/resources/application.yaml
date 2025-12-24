@@ -4,7 +4,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/
-      database: activityservice
+      database: activity_service
 
 Server:
   port: 8081
