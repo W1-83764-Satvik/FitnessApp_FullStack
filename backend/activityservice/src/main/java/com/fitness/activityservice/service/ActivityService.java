@@ -4,11 +4,11 @@ import com.fitness.activityservice.dto.request.ActivityRequest;
 import com.fitness.activityservice.dto.response.ActivityResponse;
 import com.fitness.activityservice.model.Activity;
 import com.fitness.activityservice.repository.ActivityRepository;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
@@ -25,7 +25,7 @@ public class ActivityService {
                 .build();
          Activity savedActivity = activityRepository.save(activity);
 
-        ActivityResponse activityResponse = ActivityResponse.builder()
+        return ActivityResponse.builder()
                 .userId(savedActivity.getUserId())
                 .type(savedActivity.getType())
                 .duration(savedActivity.getDuration())
@@ -36,7 +36,5 @@ public class ActivityService {
                 .createdAt(savedActivity.getCreatedAt())
                 .updatedAt(savedActivity.getUpdatedAt())
                 .build();
-
-        return activityResponse;
     }
 }

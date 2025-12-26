@@ -6,6 +6,11 @@ spring:
       uri: mongodb://localhost:27017/
       database: activity_service
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
 Server:
   port: 8081
 
