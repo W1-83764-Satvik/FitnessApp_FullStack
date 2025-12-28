@@ -16,10 +16,10 @@ public class UserService {
     private final UserRepo userRepo;
 
 
-    public UserResponse register(RegisterRequest registerRequest){
+    public UserResponse register(RegisterRequest registerRequest) {
 
-        if(userRepo.existsByEmail(registerRequest.getEmail())){
-            throw new UserAlreadyExistException("Email \""+ registerRequest.getEmail() + "\" already exist!!");
+        if (userRepo.existsByEmail(registerRequest.getEmail())) {
+            throw new UserAlreadyExistException("Email \"" + registerRequest.getEmail() + "\" already exist!!");
         }
 
         User user = User.builder().email(registerRequest.getEmail())
@@ -43,7 +43,7 @@ public class UserService {
     }
 
     public UserResponse getUserProfile(String userId) {
-        User savedUser = userRepo.findById(userId).orElseThrow( ()-> new UserNotFoundException("User not found with id "+ userId));
+        User savedUser = userRepo.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found with id " + userId));
 
         return UserResponse.builder()
                 .userId(savedUser.getUserId())
@@ -54,5 +54,9 @@ public class UserService {
                 .updatedOn(savedUser.getUpdatedOn())
                 .build();
 
+    }
+
+    public Boolean existByUserId(String userId) {
+        return userRepo.existsById(userId);
     }
 }

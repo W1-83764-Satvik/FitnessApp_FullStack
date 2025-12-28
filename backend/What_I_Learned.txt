@@ -1,0 +1,19 @@
+Invalidate Caches (IntelliJ)
+
+Resets IntelliJ when it acts weird. Like restarting your phone.
+Use it when errors show but code runs, auto-complete breaks, or indexing feels off.
+How to use: File → Invalidate Caches → Invalidate and Restart.
+It clears cache, restarts, and re-indexes everything.
+
+............................................................................................
+
+Enable Mongo Auditing
+
+Automatically fills createdAt and updatedAt.
+Without it they’re null. With it, timestamps just work.
+How to use: add @EnableMongoAuditing in the main class or in a config class.
+Config class is cleaner for bigger projects.
+
+............................................................................................
+
+last activityService - service
