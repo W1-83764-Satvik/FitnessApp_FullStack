@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adff6a89-7e29-40ca-b445-73c55fe19c56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/aiservice/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/src/main/java/com/fitness/aiservice/AiserviceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/src/main/java/com/fitness/aiservice/controller/RecommendationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/src/main/java/com/fitness/aiservice/models/Recommendation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aiservice/src/test/java/com/fitness/aiservice/AiserviceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activityservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/service/ActivityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/service/UserValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/service/UserValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activityservice/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/UserserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userservice/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,31 +52,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ActivityserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.activityservice.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice [spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.userservice.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/IKT/Documents/Satvik/FitnessApp_FullStack/backend&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.ActivityserviceApplication.executor": "Run",
+    "Maven.activityservice.executor": "Run",
+    "Maven.aiservice.executor": "Run",
+    "Maven.eureka [clean].executor": "Run",
+    "Maven.eureka [install].executor": "Run",
+    "Maven.eureka.executor": "Run",
+    "Maven.userservice [clean].executor": "Run",
+    "Maven.userservice [compile].executor": "Run",
+    "Maven.userservice [install].executor": "Run",
+    "Maven.userservice [spring-boot:run].executor": "Run",
+    "Maven.userservice [validate].executor": "Run",
+    "Maven.userservice.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/IKT/Documents/Satvik/FitnessApp_FullStack/backend",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.fitness.activityservice.dto.request" />
@@ -81,7 +87,7 @@
       <recent name="com.fitness.userservice.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.userservice">
+  <component name="RunManager" selected="Maven.aiservice">
     <configuration name="ActivityserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fitness.activityservice.ActivityserviceApplication" />
       <module name="activityservice" />
@@ -120,6 +126,36 @@
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$/activityservice" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="aiservice" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/aiservice" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -218,6 +254,7 @@
     <list>
       <item itemvalue="Application.ActivityserviceApplication" />
       <item itemvalue="Maven.userservice" />
+      <item itemvalue="Maven.aiservice" />
       <item itemvalue="Maven.activityservice" />
       <item itemvalue="Maven.eureka" />
     </list>
