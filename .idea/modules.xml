@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/FitnessApp_FullStack.iml" filepath="$PROJECT_DIR$/.idea/FitnessApp_FullStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/activityservice/activityservice.iml" filepath="$PROJECT_DIR$/backend/activityservice/activityservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/aiservice/aiservice.iml" filepath="$PROJECT_DIR$/backend/aiservice/aiservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/eureka/eureka.iml" filepath="$PROJECT_DIR$/backend/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/userservice/userservice.iml" filepath="$PROJECT_DIR$/backend/userservice/userservice.iml" />
+    </modules>
+  </component>
+</project>
